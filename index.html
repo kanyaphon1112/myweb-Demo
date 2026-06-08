@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to right, #FFE3F2, #D9F9FF);
+            background-attachment: fixed;
+        }
+
+        /* ล็อกความสูงรูปภาพทั้งหมดที่อยู่ในสไลด์ภาพภาพ */
+        .carousel-item img {
+            height: 450px;
+            /* กำหนดความสูงให้เท่ากันทุกรูป (ปรับตัวเลขได้ตามต้องการ) */
+            object-fit: cover;
+            /* จัดวางรูปให้เต็มกล่องโดยไม่เสียสัดส่วน (ภาพจะไม่เบี้ยว) */
+            object-position: center;
+            /* จัดให้จุดกึ่งกลางของภาพอยู่ตรงกลางกล่องพอดี */
+        }
+
+        .lan {
+            text-align: left;
+            color: #A1A6FF;
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- บรรทัดที่ 73: เปลี่ยนจาก text-center mt-4 เป็น row เพื่อให้ลูกๆ มาอยู่ข้างกัน -->
+        <div class="row mt-4">
+
+            <!-- 1. คอลัมน์ฝั่งซ้าย: ครอบกล่องโปรไฟล์ (กว้าง 4 ส่วนจาก 12) -->
+            <div class="col-lg-4 mb-4">
+                <div class="card w-100"> <!-- เปลี่ยนจาก width: 18rem เป็น w-100 เพื่อให้กว้างเต็มคอลัมน์ -->
+                    <img src="1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Kanyaphon Chaichana</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Gmail: Kanyaphon4890@gmail.com</li>
+                        <li class="list-group-item">Phon: 065-521-5844</li>
+                        <li class="list-group-item">Address: 157/653 Housing Authority Village, Khao Makro, Moo 6,
+                            Tambon Pho, Amphoe Mueang, Sisaket Province 33000</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2. คอลัมน์ฝั่งขวา: ครอบสไลด์ภาพ Carousel ของคุณ (กว้าง 8 ส่วนจาก 12) -->
+            <div class="col-lg-8 mb-4">
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="4.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    <div class="row mt-3" style="text-align: center;">
+                        <div class="col-6">
+                            <div class="card" style="width: 100%;"> <!-- เปลี่ยน width เป็น 100% -->
+                                <div class="card-body">
+                                    <img src="education.png" class="card-img-top"
+                                        style="width: 50%; max-width: 50px; height: 50px; " alt="...">
+                                    <h5 class="card-title">ประวัติการศึกษา</h5>
+                                    <p class="card-text">ประวัติการศึกษาตั้งแต่ระดับอนุบาลจนถึงระดับมหาวิทยาลัย</p>
+                                    <a href="#" class="btn btn-primary">ดูประวัติการศึกษา</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 🌟 3. เอาคลาส col-6 มาครอบการ์ดใบที่สอง (มันจะเด้งขึ้นมาอยู่ข้างกันทันที) -->
+                        <div class="col-6">
+                            <div class="card" style="width: 100%;"> <!-- เปลี่ยน width เป็น 100% -->
+                                <div class="card-body">
+                                    <img src="briefcase (1).png" class="card-img-top"
+                                        style="width: 50%; max-width: 50px; height: 50px; "
+                                        style="width: 50%; max-width: 50px; height: 50px; " alt="...">
+                                    <h5 class="card-title">ประสบการณ์ทำงาน</h5>
+                                    <p class="card-text">ประสบการณ์ทำงานทั้งหมดและผลงานการทำงาน</p>
+                                    <a href="#" class="btn btn-primary">ดูประวัติการทำงาน</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row text-center">
+
+                            <h5 class="lan mt-3">Skills</h5>
+                            <div class="col-3 mt-3">
+                                <div class="position-relative d-inline-block" style="width: 100px; height: 100px;">
+                                    <svg class="w-100 h-100" viewBox="0 0 36 36">
+                                        <!-- เส้นพื้นหลังวงกลมสีเทาอ่อน -->
+                                        <path class="text-light" stroke="#e0e0e0" stroke-width="2" fill="none"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <!-- เส้นสีน้ำเงินแสดงเปอร์เซ็นต์ (เปลี่ยนเลข 60 ตรง stroke-dasharray ตามต้องการ) -->
+                                        <path stroke="#A1A6FF" stroke-width="2" stroke-dasharray="70, 100"
+                                            stroke-linecap="round" fill="none"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    </svg>
+                                    <!-- ตัวเลขตรงกลาง -->
+                                    <div class="position-absolute top-50 start-50 translate-middle"
+                                        style="color: #A1A6FF; font-weight: 500; font-size: 1.2rem;">
+                                        70%
+                                    </div>
+                                    <h6 style="color:#A1A6FF;">computer</h6>
+                                </div>
+                            </div>
+                            <div class="col-3 mt-3">
+                                <div class="position-relative d-inline-block" style="width: 100px; height: 100px;">
+                                    <svg class="w-100 h-100" viewBox="0 0 36 36">
+                                        <!-- เส้นพื้นหลังวงกลมสีเทาอ่อน -->
+                                        <path class="text-light" stroke="#e0e0e0" stroke-width="2" fill="none"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <!-- เส้นสีน้ำเงินแสดงเปอร์เซ็นต์ (เปลี่ยนเลข 60 ตรง stroke-dasharray ตามต้องการ) -->
+                                        <path stroke="#A1A6FF" stroke-width="2" stroke-dasharray="10, 100"
+                                            stroke-linecap="round" fill="none"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    </svg>
+                                    <!-- ตัวเลขตรงกลาง -->
+                                    <div class="position-absolute top-50 start-50 translate-middle"
+                                        style="color: #A1A6FF; font-weight: 500; font-size: 1.2rem;">
+                                        10%
+                                    </div>
+                                    <h6 style="color:#A1A6FF;">England</h6>
+                                </div>
+                            </div>
+                            <div class="col-3 mt-3">
+                                <div class="position-relative d-inline-block" style="width: 100px; height: 100px;">
+                                    <svg class="w-100 h-100" viewBox="0 0 36 36">
+                                        <!-- เส้นพื้นหลังวงกลมสีเทาอ่อน -->
+                                        <path class="text-light" stroke="#e0e0e0" stroke-width="2" fill="none"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <!-- เส้นสีน้ำเงินแสดงเปอร์เซ็นต์ (เปลี่ยนเลข 60 ตรง stroke-dasharray ตามต้องการ) -->
+                                        <path stroke="#A1A6FF" stroke-width="2" stroke-dasharray="10, 100"
+                                            stroke-linecap="round" fill="none"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    </svg>
+                                    <!-- ตัวเลขตรงกลาง -->
+                                    <div class="position-absolute top-50 start-50 translate-middle"
+                                        style="color: #A1A6FF; font-weight: 500; font-size: 1.2rem;">
+                                        10%
+                                    </div>
+                                    <h6 style="color:#A1A6FF;">program</h6>
+                                </div>
+                            </div>
+                            <div class="col-3 mt-3">
+                                <div class="position-relative d-inline-block" style="width: 100px; height: 100px;">
+                                    <svg class="w-100 h-100" viewBox="0 0 36 36">
+                                        <!-- เส้นพื้นหลังวงกลมสีเทาอ่อน -->
+                                        <path class="text-light" stroke="#e0e0e0" stroke-width="2" fill="none"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <!-- เส้นสีน้ำเงินแสดงเปอร์เซ็นต์ (เปลี่ยนเลข 60 ตรง stroke-dasharray ตามต้องการ) -->
+                                        <path stroke="#A1A6FF" stroke-width="2" stroke-dasharray="50, 100"
+                                            stroke-linecap="round" fill="none"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    </svg>
+                                    <!-- ตัวเลขตรงกลาง -->
+                                    <div class="position-absolute top-50 start-50 translate-middle"
+                                        style="color: #A1A6FF; font-weight: 500; font-size: 1.2rem;">
+                                        50%
+                                    </div>
+                                    <h6 style="color:#A1A6FF;">Talk</h6>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div> <!-- 🌟 ปิดคลาส row -->
+
+                </div> <!-- ปิด col-lg-8 ตัวใหญ่สุดฝั่งขวา -->
+
+
+
+</html>
